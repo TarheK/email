@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% set title="Store" %}
+
+{% block content %}
+	<h1>Store</h1>
+	<form action="/addToCart?item=a" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Buy item A</button>
+	</form>
+	<form action="/addToCart?item=b" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Buy item B</button>
+	</form>
+	<form action="/addToCart?item=c" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Buy item C</button>
+	</form>
+	<p> Items in cart: {{itemsincart }} </p>
+	{% if itemsincart >0 %}
+	<form action="/checkout" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Checkout</button>
+	</form>
+	{% endif %}
+{% endblock %}
