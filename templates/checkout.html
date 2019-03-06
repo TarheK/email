@@ -1,0 +1,12 @@
+{% extends "layout.html"%}
+{%set title = "Checkout" %}
+{%block content%} 
+	<h3> You are about to buy {{ itemsincart }} items.</h3>
+	<form action="/bought" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg">Buy</button>
+	</form>
+	
+	<form action="/?clear=true" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg">Clear Cart</button>
+	</form>
+{% endblock %}
