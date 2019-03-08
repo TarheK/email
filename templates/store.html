@@ -3,17 +3,17 @@
 
 {% block content %}
 	<h1>Store</h1>
-	<form action="/addToCart?item=a" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg"> Buy item A</button>
+	<form action="/addToCart?email=a" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Buy email A</button>
 	</form>
-	<form action="/addToCart?item=b" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg"> Buy item B</button>
+	<form action="/addToCart?email=b" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Buy email B</button>
 	</form>
-	<form action="/addToCart?item=c" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg"> Buy item C</button>
+	<form action="/addToCart?email=c" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Buy email C</button>
 	</form>
-	<p> Items in cart: {{itemsincart }} </p>
-	{% if itemsincart >0 %}
+	<p> Emails in cart: {{emailsincart }} </p>
+	{% if emailsincart >0 %}
 	<form action="/checkout" method="POST">
 	<button type="submit" class="btn btn-outline-success btn-lg"> Checkout</button>
 	</form>
