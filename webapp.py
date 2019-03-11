@@ -21,7 +21,7 @@ def renderStore():
 @app.route('/addToCart',methods=["POST","GET"])
 def renderAddToCart():
     session["emailsincart"] += 1
-    if request.args["email"]=="1":
+    if request.args["email"]=="tofreind":
         session["email_a"] += 1
     
     return render_template("addToCart.html", item_name = "Email " + str(request.args["email"]))
