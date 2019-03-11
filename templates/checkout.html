@@ -1,12 +1,12 @@
 {% extends "layout.html"%}
 {%set title = "Checkout" %}
 {%block content%} 
-	<h3> You are about to buy {{ emailsincart }} emails.</h3>
+	<h3> You are about to send {{ emailsincart }} emails.</h3>
 	<form action="/bought" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg">Buy</button>
+	<button type="submit" class="btn btn-outline-success btn-lg">Send</button>
 	</form>
 	
 	<form action="/?clear=true" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg">Clear Cart</button>
+	<button type="submit" class="btn btn-outline-success btn-lg">Don't Send</button>
 	</form>
 {% endblock %}
