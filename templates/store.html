@@ -5,13 +5,7 @@
 	<h1>Store</h1>
 	<form action="/addToCart?email=a" method="POST">
 	<button type="submit" class="btn btn-outline-success btn-lg"> Send email A</button>
-	</form>
-	<form action="/addToCart?email=b" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg"> Send email B</button>
-	</form>
-	<form action="/addToCart?email=c" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg"> Send email C</button>
-	</form>
+        </form>
 	<p> Emails in cart: {{emailsincart }} </p>
 	{% if emailsincart >0 %}
 	<form action="/checkout" method="POST">
