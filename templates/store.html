@@ -12,8 +12,8 @@
 	<form action="/addToCart?email=c" method="POST">
 	<button type="submit" class="btn btn-outline-success btn-lg"> Buy email C</button>
 	</form>
-	<p> Emails in cart: {{emailsbeingsent }} </p>
-	{% if emailsbeingsent >0 %}
+	<p> Emails in cart: {{emailsincart }} </p>
+	{% if emailsincart >0 %}
 	<form action="/checkout" method="POST">
 	<button type="submit" class="btn btn-outline-success btn-lg"> Checkout</button>
 	</form>
