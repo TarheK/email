@@ -3,10 +3,10 @@
 {%block content%} 
 	<h3>1 {{ email_name }}Are you sure you want to send this email </h3>
 	<form action="/" method="POST">
-	<button type="submit"class="btn btn-outline-success btn-lg" >Continue Shopping</button>
+	<button type="submit"class="btn btn-outline-success btn-lg" >Don't send</button>
 	</form>
 	
 	<form action="/checkout" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg">Checkout</button>
+	<button type="submit" class="btn btn-outline-success btn-lg">Send</button>
 	</form>
 {% endblock %}
