@@ -13,9 +13,7 @@ def renderStore():
         session["emailsincart"] = 0
         print("skrt")
         session["email_a"] = 0
-        session["email_b"] = 0
-        session["email_c"] = 0
-        
+      
         
     return render_template("store.html",emailsincart=session["emailsincart"])
     
@@ -26,11 +24,6 @@ def renderAddToCart():
     if request.args["email"]=="a":
         session["email_a"] += 1
     
-    elif request.args["email"]=="b":
-        session["email_b"] += 1
-        
-    elif request.args["email"]=="c":
-        session["email_c"] += 1
     return render_template("addToCart.html", item_name = "Email " + str(request.args["email"]))
     
 @app.route('/checkout',methods=["POST","GET"])
