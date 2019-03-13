@@ -15,16 +15,14 @@ def renderStore():
 @app.route('/next1', methods=["POST","GET"])
 def rendernext1():
     session["data1"]=request.form["data"]
-    print(session.data1)
+    print(session["data1"])
     return render_template("sent.html")
 
-@app.route('/addToCart',methods=["POST","GET"])
-def renderAddToCart():
-    session["emailsincart"] += 1
-    if request.args["email"]=="tofreind":
-        session["email_a"] += 1
-    
-    return render_template("addToCart.html", item_name = "Email " + str(request.args["email"]))
+@app.route('/next2',methods=["POST","GET"])
+def rendernext2():
+    session["data2"]=request.form["data"]
+    print(session["data2"])
+    return render_template("addToCart.html")
     
 @app.route('/checkout',methods=["POST","GET"])
 def renderCheckout():

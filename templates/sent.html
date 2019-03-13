@@ -1,1 +1,23 @@
+{% extends "layout.html" %}
+{% set title="Sent" %}
+
+{% block content %}
+	<h1>Sent</h1>
+	<form action="/next2" method="POST">
+		<div class="form-group">
+		<label for="comment">What is your favorite color</label>
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">Red</button>
+  <button type="button" class="btn btn-primary">Blue</button>
+  <button type="button" class="btn btn-primary">Orange</button>
+  <button type="button" class="btn btn-primary">Pink</button>
+  <button type="button" class="btn btn-primary">Green</button>
+  <button type="button" class="btn btn-primary">Yellow</button>
+  <button type="button" class="btn btn-primary">Black</button>
+  <button type="button" class="btn btn-primary">White</button>
+  <button type="button" class="btn btn-primary">Brown</button>
+</div>
+	<button type="submit" class="btn btn-outline-success btn-lg"> Next</button>
+        </form>
+{% endblock %}
 

@@ -1,12 +1,21 @@
 {% extends "layout.html"%}
 {%set title = "Add to Cart" %}
 {%block content%} 
-	<h3>1 {{ email_name }}Are you sure you want to send this email </h3>
-	<form action="/" method="POST">
-	<button type="submit"class="btn btn-outline-success btn-lg" >Don't send</button>
-	</form>
-	
+		<h1> </h1>
 	<form action="/checkout" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg">Next</button>
-	</form>
+		<div class="form-group">
+		<label for="comment">What is your favorite color</label>
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">Red</button>
+  <button type="button" class="btn btn-primary">Blue</button>
+  <button type="button" class="btn btn-primary">Orange</button>
+  <button type="button" class="btn btn-primary">Pink</button>
+  <button type="button" class="btn btn-primary">Green</button>
+  <button type="button" class="btn btn-primary">Yellow</button>
+  <button type="button" class="btn btn-primary">Black</button>
+  <button type="button" class="btn btn-primary">White</button>
+  <button type="button" class="btn btn-primary">whyyyyy</button>
+</div>
+	<button type="submit" class="btn btn-outline-success btn-lg"> Next</button>
+        </form>
 {% endblock %}
