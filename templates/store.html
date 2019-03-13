@@ -3,12 +3,11 @@
 
 {% block content %}
 	<h1>Store</h1>
-	<form action="/addToCart?email=tofreind" method="POST">
+	<form action="/next1" method="POST">
+		<div class="form-group">
+  <label for="comment">Comment:</label>
+  <textarea name="data" class="form-control" rows="5" id="comment"></textarea>
+</div>
 	<button type="submit" class="btn btn-outline-success btn-lg"> Send email to freind</button>
         </form>
-	<p> Emails in cart: {{emailsincart }} </p>
-	{% if emailsincart >0 %}
-	<form action="/checkout" method="POST">
-	</form>
-	{% endif %}
 {% endblock %}
