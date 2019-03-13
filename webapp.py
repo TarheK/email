@@ -14,7 +14,9 @@ def renderStore():
     
 @app.route('/next1', methods=["POST","GET"])
 def rendernext1():
-      return render_template("store.html")
+    session["data1"]=request.form["data"]
+    print(session.data1)
+    return render_template("sent.html")
 
 @app.route('/addToCart',methods=["POST","GET"])
 def renderAddToCart():
