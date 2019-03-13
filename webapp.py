@@ -9,13 +9,10 @@ app.secret_key=os.environ["SECRET_KEY"];
 
 @app.route('/', methods=["POST","GET"])
 def renderStore():
-    if "emailsincart" not in session or "clear" in request.args:
-        session["emailsincart"] = 0
-        print("skrt")
-        session["email_a"] = 0
+
       
         
-    return render_template("store.html",emailsincart=session["emailsincart"])
+    return render_template("store.html")
     
 
 @app.route('/addToCart',methods=["POST","GET"])
