@@ -1,9 +1,25 @@
 {% extends "layout.html"%}
-{%set title = "You bought "+emailsincart+" emails" %}
+{%set title = "bought" %}
 {%block content%} 
-	<h3> You just bought {{ emailsincart }} emails.</h3>
+		<h1>Question 4</h1>
+	<img src="{{ url_for("static",filename="dolphin.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="dog.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="cat.jpg") }}" alt="" style="width:250px;height:200px;">
+	<img src="{{ url_for("static",filename="unicorn.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="giraffe.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="dragon.jpg") }}" alt="" style="width:200px;height:200px;">
+	<form action="/next5" method="POST">
+		<div class="form-group">
+		<label for="comment">What is your favorite animal out of these options</label>
+<div  class="btn-group">
 	
-	<form action="/?clear=true" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg">Return to Store</button>
-	</form>
+		<button name="data" value="Japanese" class="btn btn-primary">Dolphin</button>
+		<button name="data" value="Mexican" class="btn btn-primary">Dog</button>
+		<button name="data" value="italian" class="btn btn-primary">Cat</button>
+		<button name="data" value="chinese" class="btn btn-primary">Unicorn</button>
+		<button name="data" value="indian" class="btn btn-primary">giraffe</button>
+		<button name="data" value="greek" class="btn btn-primary">Dragon</button>
+		
+	
+        </form>
 {% endblock %}

@@ -1,21 +1,25 @@
 {% extends "layout.html"%}
 {%set title = "Add to Cart" %}
+
 {%block content%} 
-		<h1> </h1>
-	<form action="/checkout" method="POST">
+		<h1>Question 2</h1>
+	<img src="{{ url_for("static",filename="japanese.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="mexican.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="italian.jpg") }}" alt="" style="width:250px;height:200px;">
+	<img src="{{ url_for("static",filename="chinese.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="indian.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="greek.jpg") }}" alt="" style="width:200px;height:200px;">
+	<form action="/next3" method="POST">
 		<div class="form-group">
-		<label for="comment">What is your favorite color</label>
-<div class="btn-group">
-  <button type="button" class="btn btn-primary">Red</button>
-  <button type="button" class="btn btn-primary">Blue</button>
-  <button type="button" class="btn btn-primary">Orange</button>
-  <button type="button" class="btn btn-primary">Pink</button>
-  <button type="button" class="btn btn-primary">Green</button>
-  <button type="button" class="btn btn-primary">Yellow</button>
-  <button type="button" class="btn btn-primary">Black</button>
-  <button type="button" class="btn btn-primary">White</button>
-  <button type="button" class="btn btn-primary">whyyyyy</button>
-</div>
-	<button type="submit" class="btn btn-outline-success btn-lg"> Next</button>
+		<label for="comment">What is your favorite type food out of these options</label>
+<div  class="btn-group">
+	
+		<button name="data" value="Japanese" class="btn btn-primary">Japanese</button>
+		<button name="data" value="Mexican" class="btn btn-primary">Mexican</button>
+		<button name="data" value="italian" class="btn btn-primary">Italian</button>
+		<button name="data" value="chinese" class="btn btn-primary">Chinese</button>
+		<button name="data" value="indian" class="btn btn-primary">Indian</button>
+		<button name="data" value="greek" class="btn btn-primary">Greek</button>
+		
         </form>
 {% endblock %}

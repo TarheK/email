@@ -21,22 +21,31 @@ def rendernext1():
 @app.route('/next2',methods=["POST","GET"])
 def rendernext2():
     session["data2"]=request.form["data"]
+    print(request.form["data"])
     print(session["data2"])
     return render_template("addToCart.html")
     
-@app.route('/checkout',methods=["POST","GET"])
-def renderCheckout():
-    if "emailsincart" not in session:
-        return redirect(url_for("renderStore"))
-    return render_template("checkout.html",itzemsincart=session["emailsincart"])
+@app.route('/next3',methods=["POST","GET"])
+def rendernext3():
+    session["data3"]=request.form["data"]
+    print(request.form["data"])
+    print(session["data3"])
+    return render_template("checkout.html")
 
-@app.route('/bought',methods=["POST","GET"])
-def renderBought():
-    if "emailsbeingsent" not in session:
-        return redirect(url_for("renderStore"))
-    items = session["emailsincart"]
-    session["emailsincart"] = 0
-    return render_template("bought.html",emailsincart=str(emails))
+@app.route('/next4',methods=["POST","GET"])
+def rendernext4():
+    session["data4"]=request.form["data"]
+    print(request.form["data"])
+    print(session["data4"])
+    return render_template("bought.html")
+    
+@app.route('/next5',methods=["POST","GET"])
+def rendernext5():
+    session["data5"]=request.form["data"]
+    print(request.form["data"])
+    print(session["data5"])
+    return render_template("end.html")
+    
     
 if __name__=="__main__":
     app.run(debug=True)

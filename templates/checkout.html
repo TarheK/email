@@ -1,12 +1,28 @@
 {% extends "layout.html"%}
-{%set title = "Checkout" %}
+{%set title = "Check Out" %}
 {%block content%} 
-	<h3> You are about to send {{ emailsincart }} emails.</h3>
-	<form action="/bought" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg">Send</button>
-	</form>
+		<h1>Question 3</h1>
+	<img src="{{ url_for("static",filename="ariel.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="repunzel.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="jasmine.jpg") }}" alt="" style="width:250px;height:200px;">
+	<img src="{{ url_for("static",filename="tiana.png") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="cinderella.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="snowwhite.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="aurora.jpg") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="belle.jpg") }}" alt="" style="width:200px;height:200px;">
+	<form action="/next4" method="POST">
+		<div class="form-group">
+		<label for="comment">Who is your favorite Disney Princess out of these</label>
+<div  class="btn-group">
 	
-	<form action="/?clear=true" method="POST">
-	<button type="submit" class="btn btn-outline-success btn-lg">Don't Send</button>
-	</form>
+		<button name="data" value="Ariel" class="btn btn-primary">Ariel</button>
+		<button name="data" value="Repunzel" class="btn btn-primary">Repunzel</button>
+		<button name="data" value="Jasmine" class="btn btn-primary">Jasmine</button>
+		<button name="data" value="Tiana" class="btn btn-primary">Tiana</button>
+		<button name="data" value="Cinderella" class="btn btn-primary">Cinderella</button>
+		<button name="data" value="SnowWhite" class="btn btn-primary">Snow White </button>
+	    <button name="data" value="Aurora" class="btn btn-primary">Aurora </button>
+		<button name="data" value="Belle" class="btn btn-primary">Belle</button>
+        </form>
+	
 {% endblock %}

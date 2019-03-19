@@ -2,22 +2,33 @@
 {% set title="Sent" %}
 
 {% block content %}
-	<h1>Sent</h1>
+	<h1>Question 1</h1>
+	<img src="{{ url_for("static",filename="red.png") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="blue.png") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="orange.png") }}" alt="" style="width:250px;height:200px;">
+	<img src="{{ url_for("static",filename="pink.png") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="purple.png") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="green.png") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="yellow.png") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="black.png") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="white.png") }}" alt="" style="width:200px;height:200px;">
+	<img src="{{ url_for("static",filename="brown.jpg") }}" alt="" style="width:200px;height:200px;">
 	<form action="/next2" method="POST">
 		<div class="form-group">
-		<label for="comment">What is your favorite color</label>
-<div class="btn-group">
-  <button type="button" class="btn btn-primary">Red</button>
-  <button type="button" class="btn btn-primary">Blue</button>
-  <button type="button" class="btn btn-primary">Orange</button>
-  <button type="button" class="btn btn-primary">Pink</button>
-  <button type="button" class="btn btn-primary">Green</button>
-  <button type="button" class="btn btn-primary">Yellow</button>
-  <button type="button" class="btn btn-primary">Black</button>
-  <button type="button" class="btn btn-primary">White</button>
-  <button type="button" class="btn btn-primary">Brown</button>
-</div>
-	<button type="submit" class="btn btn-outline-success btn-lg"> Next</button>
-        </form>
+			<label for="comment">What is your favorite color</label>
+		<div  class="btn-group">
+		<button name="data" value="red" class="btn btn-primary">red</button>
+		<button name="data" value="blue" class="btn btn-primary">blue</button>
+		<button name="data" value="orange" class="btn btn-primary">orange</button>
+		<button name="data" value="pink" class="btn btn-primary">pink</button>
+		<button name="data" value="pink" class="btn btn-primary">purple</button>
+		<button name="data" value="green" class="btn btn-primary">green</button>
+		<button name="data" value="yellow" class="btn btn-primary">yellow</button>
+		<button name="data" value="black" class="btn btn-primary">black</button>
+		<button name="data" value="white" class="btn btn-primary">white</button>
+		<button name="data" value="brown" class="btn btn-primary">brown</button>
+		</div>
+		
+    </form>
 {% endblock %}
 
