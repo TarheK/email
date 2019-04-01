@@ -6,7 +6,9 @@
 	<form action="/next1" method="POST">
 		<div class="form-group">
 		  <label for="comment">Your Name</label>
-		  <textarea name="data" class="form-control" rows="5" id="comment"></textarea>
+		  <input type="text" name="name" class="form-control">
+		   <label for="comment">date and time</label>
+		  <input type="text" name="date" class="form-control" value="{{VAR}}">
 		</div>
 		<button type="submit" class="btn btn-outline-success btn-lg"> next</button>
     </form>

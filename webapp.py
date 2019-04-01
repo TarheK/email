@@ -1,20 +1,22 @@
-import os
+import os, datetime
 from flask import Flask, url_for, render_template, request
 from flask import redirect
 from flask import session
+from flask_mail import Mail 
 
 app = Flask(__name__)
+mail = Mail(app)
 
 app.secret_key=os.environ["SECRET_KEY"];   
 
 @app.route('/', methods=["POST","GET"])
 def renderStore():
-
-    return render_template("store.html")
+    var=datetime.datetime.now().strftime("%m, month, %d, day, %H, hour, %M, min")
+    return render_template("store.html",VAR=var)
     
 @app.route('/next1', methods=["POST","GET"])
 def rendernext1():
-    session["data1"]=request.form["data"]
+    session["data1"]=request.form["name"]
     print(session["data1"])
     return render_template("sent.html")
 
