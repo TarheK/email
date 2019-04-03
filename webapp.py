@@ -24,40 +24,40 @@ def renderStore():
     
 @app.route('/next1', methods=["POST","GET"])
 def rendernext1():
-    session["data1"]=request.form["name"]
-    print(session["data1"])
+    session["name"]=request.form["name"]
+    print(session["name"])
     return render_template("sent.html")
 
 @app.route('/next2',methods=["POST","GET"])
 def rendernext2():
-    session["data2"]=request.form["data"]
+    session["color"]=request.form["data"]
     print(request.form["data"])
-    print(session["data2"])
+    print(session["color"])
     return render_template("addToCart.html")
     
 @app.route('/next3',methods=["POST","GET"])
 def rendernext3():
-    session["data3"]=request.form["data"]
+    session["food"]=request.form["data"]
     print(request.form["data"])
-    print(session["data3"])
+    print(session["food"])
     return render_template("checkout.html")
 
 @app.route('/next4',methods=["POST","GET"])
 def rendernext4():
-    session["data4"]=request.form["data"]
+    session["princess"]=request.form["data"]
     print(request.form["data"])
-    print(session["data4"])
+    print(session["princess"])
     return render_template("bought.html")
     
 @app.route('/next5',methods=["POST","GET"])
 def rendernext5():
-    session["data5"]=request.form["data"]
+    session["animal"]=request.form["data"]
     print(request.form["data"])
-    print(session["data5"])
+    print(session["animal"])
     
-    attachData="data1,data2,data3,data4,data5\n\"%s\",\"%s\",\"%s\",\"%s\",\"%s\""%(session["data1"],session["data2"],session["data3"],session["data4"],session["data5"])
+    attachData="name,color,food,princess,animal\n\"%s\",\"%s\",\"%s\",\"%s\",\"%s\""%(session["name"],session["color"],session["food"],session["princess"],session["animal"])
     
-    msg = Message('Hello', sender = 'ameliatarhekot@gmail.com', recipients = ['ameliatarhekot@gmail.com'])
+    msg = Message('Thank you for answering these questions! :)', sender = 'ameliatarhekot@gmail.com', recipients = ['ameliatarhekot@gmail.com'])
     msg.attach("data.csv","text/csv",attachData)
     
     mail.send(msg)
