@@ -57,7 +57,7 @@ def rendernext5():
     
     attachData="name,color,food,princess,animal\n\"%s\",\"%s\",\"%s\",\"%s\",\"%s\""%(session["name"],session["color"],session["food"],session["princess"],session["animal"])
     
-    msg = Message('Thank you for answering these questions! :)', sender = 'ameliatarhekot@gmail.com', recipients = ['ameliatarhekot@gmail.com'])
+    msg = Message('Thank you for answering these questions! <img src="{{ url_for("static",filename="greek.jpg") }}" alt="" style="width:200px;height:200px;">:)', sender = 'ameliatarhekot@gmail.com', recipients = ['ameliatarhekot@gmail.com'])
     msg.attach("data.csv","text/csv",attachData)
     
     mail.send(msg)
